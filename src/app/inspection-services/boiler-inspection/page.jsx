@@ -257,13 +257,13 @@ const Page = () => {
                 <div className="flex flex-col md:flex-row justify-center gap-4">
                   <a
                     href={boilerComplianceData[3].callToAction.button1.href}
-                    className="bg-brand-bright text-black py-3 px-8 rounded-lg hover:bg-emerald-400 transition-all duration-300 transform hover:scale-105"
+                    className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto"
                   >
                     {boilerComplianceData[3].callToAction.button1.text}
                   </a>
                   <a
                     href={boilerComplianceData[3].callToAction.button2.href}
-                    className="border-2 border-brand-bright text-brand-bright py-3 px-8 rounded-lg hover:bg-brand-bright/10 transition-all duration-300 transform hover:scale-105"
+                    className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto"
                   >
                     {boilerComplianceData[3].callToAction.button2.text}
                   </a>

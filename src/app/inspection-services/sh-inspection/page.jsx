@@ -153,13 +153,13 @@ City’s regulations is crucial for safety and legal adherence."
                   <div className="flex flex-col md:flex-row justify-center gap-6">
                     <a
                       href={`tel:${sectionData.callToAction.contact.call}`}
-                      className="border-2 border-[#00cc6a] text-[#00cc6a] py-3 px-8 rounded-lg hover:bg-[#00cc6a]/10 transition-all duration-300"
+                      className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto"
                     >
                       {sectionData.callToAction.contact.call}
                     </a>
                     <a
                       href={`mailto:${sectionData.callToAction.contact.email}`}
-                      className="border-2 border-[#00cc6a] text-[#00cc6a] py-3 px-8 rounded-lg hover:bg-[#00cc6a]/10 transition-all duration-300"
+                      className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto"
                     >
                       {sectionData.callToAction.contact.email}
                     </a>

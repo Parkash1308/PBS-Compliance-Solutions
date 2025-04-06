@@ -160,7 +160,7 @@ const Page = () => {
                   <div className="flex flex-col md:flex-row justify-center gap-4">
                     <a
                       href={sectionData.callToAction.button1.href}
-                      className="bg-gradient-to-r from-brand-bright to-emerald-400 text-black py-3 px-8 rounded-lg hover:scale-105 transition-all duration-300"
+                      className="bg-[#A9CED1] hover:bg-[#91B8BE] from-brand-bright to-emerald-400 text-black py-3 px-8 rounded-lg hover:scale-105 transition-all duration-300"
                     >
                       {sectionData.callToAction.button1.text}
                     </a>

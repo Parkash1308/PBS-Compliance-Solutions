@@ -130,7 +130,7 @@ const page = () => {
               .map((section) => (
                 <div key={section.id}>
                   <p className="text-gray-300 my-6">{section.text}</p>
-                  <button className="mt-6 px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition duration-300">
+                  <button className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto">
                     {section.buttonText}
                   </button>
                 </div>
