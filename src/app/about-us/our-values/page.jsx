@@ -26,7 +26,7 @@ const page = () => {
       />
 
       {/* Fixed Section 1: Moved title outside the motion div */}
-      <section className="bg-[#2d2d2d] py-8 px-6 md:px-12 lg:px-24">
+      <section className="bg-[#38403e] text-[#dec2e1] py-8 px-6 md:px-12 lg:px-24">
         <div className="my-16 md:my-10 container mx-auto">
           {/* Moved title section here and fixed spacing */}
           <div className="text-center my-2 xl:mb-8 py-2 mb-16">

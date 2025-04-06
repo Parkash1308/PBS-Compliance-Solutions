@@ -8,7 +8,7 @@ const page = () => {
   const parkingArray = Object.values(parking);
 
   return (
-    <div className="bg-brand-darkest text-white min-h-screen">
+    <div className="bg-[#38403e] text-[#dec2e1] min-h-screen">
       <HeroSection
         heading="LL 126 Parking Structure Inspection"
         text="Ensure Compliance, Prevent risks & Protect your property by our simplified 
@@ -22,14 +22,14 @@ processes through the assessments of our qualified licensed experts"
             <motion.div
               key={index}
               className={`bg-brand-dark1 p-8 rounded-lg shadow-md mb-8 border-l-4 border-${index % 5 === 0
-                  ? "green-500"
-                  : index % 5 === 1
-                    ? "blue-500"
-                    : index % 5 === 2
-                      ? "orange-500"
-                      : index % 5 === 3
-                        ? "purple-500"
-                        : "deep-purple-500"
+                ? "green-500"
+                : index % 5 === 1
+                  ? "blue-500"
+                  : index % 5 === 2
+                    ? "orange-500"
+                    : index % 5 === 3
+                      ? "purple-500"
+                      : "deep-purple-500"
                 }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

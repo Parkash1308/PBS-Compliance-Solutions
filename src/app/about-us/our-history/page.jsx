@@ -65,7 +65,7 @@ const page = () => {
       />
       <div>
         {/* Main timeline section with dark background */}
-        <section className="bg-[#171717] py-16 px-6 md:px-12 lg:px-24">
+        <section className="bg-[#38403e] text-[#dec2e1] py-16 px-6 md:px-12 lg:px-24">
           <div className="my-32 container mx-auto md:w-[60vw] lg:w-[80vw]">
             {/* Animated Section Heading - Uses framer-motion for fade-in and slide-up effect */}
             <motion.div
@@ -104,8 +104,8 @@ const page = () => {
                   {/* Image Container - Adjusts positioning based on even/odd index */}
                   <div
                     className={`w-full md:w-1/2 p-4 flex ${index % 2 === 0
-                        ? "justify-end md:pr-8" // Even indexes: right-aligned on desktop
-                        : "justify-start md:pl-8" // Odd indexes: left-aligned on desktop
+                      ? "justify-end md:pr-8" // Even indexes: right-aligned on desktop
+                      : "justify-start md:pl-8" // Odd indexes: left-aligned on desktop
                       }`}
                   >
                     <CustomImage

@@ -246,7 +246,7 @@ compliance, cost efficiency, and seamless operations for your property" />
 
       {/* Portfolio Content Section */}
       <motion.section
-        className="bg-[#171717] text-[#E5E7EB] py-16 px-6 md:px-12 lg:px-24"
+        className="bg-[#38403e] text-[#dec2e1] py-16 px-6 md:px-12 lg:px-24"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}

@@ -6,7 +6,7 @@ import { parapetData } from "../data"; // Import parapetData
 
 const page = () => {
   return (
-    <div className="bg-brand-darkest text-white min-h-screen">
+    <div className="bg-[#38403e] text-[#dec2e1] min-h-screen">
       <HeroSection
         heading="Comply with LL 126 Parapet Inspection"
         text="Prevent Hazards, avoid Penalties by the help our licensed experts"

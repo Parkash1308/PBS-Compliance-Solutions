@@ -6,7 +6,7 @@ import { ll152 } from "../data"; // Import the data
 
 const page = () => {
   return (
-    <div className="bg-brand-darkest text-white min-h-screen">
+    <div className="bg-[#38403e] text-[#dec2e1] min-h-screen">
       <HeroSection
         heading="LL152 Gas Piping Inspections"
         text=": Proactive Inspections Every 3 Years to Meet NYC Mandates, ensuring tenant 

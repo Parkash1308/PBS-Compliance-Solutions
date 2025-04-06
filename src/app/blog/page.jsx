@@ -146,7 +146,7 @@ const page = () => {
       /> */}
 
       {/* Main Blog Section - Dark background with responsive padding */}
-      <section className="bg-[#171717] text-[#E5E7EB] py-32 px-6 md:px-12 lg:px-24">
+      <section className="bg-[#38403e] text-[#dec2e1] py-32 px-6 md:px-12 lg:px-24">
         <div className="container mx-auto sm:w-[90%] md:w-[70%] md:mr-48 lg:mx-auto">
           {/* Featured Post - Large highlighted article at the top */}
           <motion.div
@@ -266,11 +266,10 @@ const page = () => {
                         e.preventDefault();
                         handlePageChange(index + 1);
                       }}
-                      className={`hover:bg-[#2d2d2d] ${
-                        currentPage === index + 1
+                      className={`hover:bg-[#2d2d2d] ${currentPage === index + 1
                           ? "bg-brand-bright text-black hover:bg-[#00CC6A]" // Active page styling
                           : "text-brand-midGray" // Inactive page styling
-                      }`}
+                        }`}
                     >
                       {index + 1}
                     </PaginationLink>

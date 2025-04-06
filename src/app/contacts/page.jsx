@@ -120,7 +120,7 @@ const page = () => {
         text="Contact PBS Compliance Solutions. 24/7 Support for Emergencies, Inspections, and Compliance Urgencies."
       />
 
-      <section className="relative bg-[#171717] text-[#E5E7EB] py-16 px-6 md:px-12 lg:px-24 flex-grow">
+      <section className="relative bg-[#38403e] text-[#dec2e1] py-16 px-6 md:px-12 lg:px-24 flex-grow">
         <div className="container mx-auto flex flex-col xl:flex-row items-center justify-center gap-12 xl:gap-24 h-full sm:w-[90%] md:w-[70%] md:ml-0 lg:w-[80%] 2xl:mx-auto 2xl:w-[75%]">
           <div
             ref={leftColumnRef}

@@ -6,7 +6,7 @@ import { hydrostaticTestingData } from "../data";
 
 const Page = () => {
   return (
-    <div className="bg-[#101010] min-h-screen">
+    <div className="bg-[#38403e] text-[#dec2e1] min-h-screen">
       <HeroSection
         heading="Sprinkler Inspection Hydrostatic Test"
         text="Ensuring that your property’s fire sprinkler systems are compliant with New York 

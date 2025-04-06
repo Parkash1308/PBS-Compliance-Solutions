@@ -6,7 +6,7 @@ import { localLaw } from "../data"; // Assuming data.js is in the same directory
 
 const page = () => {
   return (
-    <div className="bg-brand-darkest">
+    <div className="bg-[#38403e] text-[#dec2e1]">
       {/* Hero section as full-width header */}
       <HeroSection
         heading="Avoid Fines, Prevent Disasters, Protect your Legacy"

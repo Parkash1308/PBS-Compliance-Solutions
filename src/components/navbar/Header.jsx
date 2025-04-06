@@ -45,11 +45,11 @@ const Header = () => {
     <div className="sticky top-0 right-0 z-50 w-full bg-brand-gray1 shadow-md">
       <motion.div
         ref={ref}
-        className="flex justify-center items-center h-[100px] sticky top-0"
+        className="flex justify-center items-center h-[80px] md:h-[100px] sticky top-0" // Adjusted height for responsiveness
         initial={{ height: "100px" }}
       >
         <div
-          className="cursor-pointer p-4"
+          className="cursor-pointer p-2 md:p-4" // Adjusted padding for responsiveness
           onClick={() => {
             setIsOpen(false);
             router.push("/");
@@ -58,8 +58,8 @@ const Header = () => {
           <motion.div ref={imageRef} initial={{ scale: 1 }}>
             <CustomImage
               src="/PBS Assets/Brand Language/Logo 2.png"
-              width={220} // Increased width
-              height={220} // Increased height
+              width={180} // Adjusted width for responsiveness
+              height={180} // Adjusted height for responsiveness
               alt="Website Logo"
               className="h-auto"
             />

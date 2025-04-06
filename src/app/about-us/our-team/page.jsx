@@ -6,7 +6,7 @@ import { teamMembers, leadershipTeam, projectManagers, specialists } from "./dat
 
 const page = () => {
   return (
-    <div className="bg-[#101010] min-h-screen">
+    <div className="bg-[#38403e] text-[#dec2e1] min-h-screen">
       <HeroSection
         heading="Our Team"
         text="Meet the professionals driving our success."

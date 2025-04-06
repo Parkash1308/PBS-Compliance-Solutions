@@ -6,7 +6,7 @@ import { elevatorComplianceData } from "../data";
 
 const Page = () => {
   return (
-    <div className="bg-[#101010] min-h-screen">
+    <div className="bg-[#38403e] text-[#dec2e1] min-h-screen">
       <HeroSection
         heading="Elevator Inspection"
         text="Annual inspections, violation erasure, and emergency repairs—trusted by landlords who refuse to gamble with safety or deadlines."

@@ -24,7 +24,7 @@ const page = () => {
 
 
       {/* Main content section with dark background and responsive padding */}
-      <section className="bg-gray-900 text-white px-6 md:px-16 lg:px-24 py-12 py-[150px] xl:py-[200px]">
+      <section className="bg-[#38403e] text-[#dec2e1] px-6 md:px-16 lg:px-24 py-12 py-[150px] xl:py-[200px]">
         <div className="container mx-auto">
           {/* Our Story and Our Vision in two columns with green border */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">

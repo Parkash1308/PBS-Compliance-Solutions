@@ -67,7 +67,7 @@ const Solutions = () => {
   }, []);
 
   return (
-    <div className="bg-[#141414] text-white py-16 md:py-24 lg:py-32">
+    <div className="bg-[#38403e] text-[#dec2e1] py-16 md:py-24 lg:py-32">
       <div
         className="container mx-auto px-6 md:px-12 lg:px-24"
         ref={containerRef}
@@ -76,7 +76,7 @@ const Solutions = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-conthrax font-bold mb-6 md:mb-10">
             Solutions
           </h1>
-          <div className="max-w-3xl mx-auto text-gray-400">
+          <div className="max-w-3xl mx-auto text-[#dec2e1]/70">
             <p>
               Teams like yours are using InCheck to manage critical onsite work:
             </p>
@@ -87,7 +87,7 @@ const Solutions = () => {
           {SolutionsItems.map((item) => (
             <div
               key={item.title}
-              className="solution-card bg-gray-800 p-6 rounded-lg"
+              className="solution-card bg-[#141414]/80 p-6 rounded-lg border border-[#dec2e1]/20"
             >
               <CustomImage
                 src={item.image}
@@ -97,7 +97,7 @@ const Solutions = () => {
                 className="w-full h-48 object-cover rounded-md mb-4"
               />
               <h3 className="text-xl md:text-2xl font-bold mb-3">{item.title}</h3>
-              <p className="text-gray-400">{item.description}</p>
+              <p className="text-[#dec2e1]/70">{item.description}</p>
             </div>
           ))}
         </div>

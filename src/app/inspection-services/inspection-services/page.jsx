@@ -27,7 +27,7 @@ const ParkingPage = () => {
   };
 
   return (
-    <div className="bg-[#101010] text-[#E5E7EB]">
+    <div className="bg-[#38403e] text-[#dec2e1]">
       <HeroSection
         heading="Turn Building Codes from Foe to Friend"
         text="We Decode NYC’s Labyrinth of Laws into actionable solutions, so your Property 

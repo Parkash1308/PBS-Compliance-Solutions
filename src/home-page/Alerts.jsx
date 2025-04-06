@@ -124,11 +124,11 @@ const Alerts = () => {
   }, []);
 
   return (
-    <div className="bg-brand-dark py-16" ref={ref}>
+    <div className="bg-[#141414] py-16" ref={ref}>
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex flex-col lg:flex-row lg:justify-center gap-16">
           <div ref={leftRef} className="lg:w-1/2 relative hidden lg:block">
-            <div className="relative h-full w-full overflow-hidden rounded-2xl border-2 border-brand-gray1/50 bg-gradient-to-br from-brand-darkGray/30 to-brand-green1/20">
+            <div className="relative h-full w-full overflow-hidden rounded-2xl border-2 border-[#dec2e1]/20 bg-gradient-to-br from-[#141414]/30 to-[#dec2e1]/20">
               <CustomImage
                 src="/PBS%20Assets/better-assets/Images%20Without%20Bg/Facebook%20Cover.webp"
                 height={100}
@@ -145,9 +145,9 @@ const Alerts = () => {
               <Heading
                 main="Alert System:"
                 subpart="Never Miss a Critical step for property again"
-                styling="mb-6 text-brand-light"
+                styling="mb-6 text-[#dec2e1]"
               />
-              <div className="text-brand-gray3 space-y-6">
+              <div className="text-[#dec2e1]/70 space-y-6">
                 <p className="text-lg leading-relaxed">
                   Revolutionizing the industry by providing access to every
                   demographic of data in real-time. Our enhanced alert system
@@ -157,15 +157,15 @@ const Alerts = () => {
                 </p>
                 <div className="relative flex items-center gap-4 pt-6">
                   <div className="relative">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-green2/20 opacity-75"></span>
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dec2e1]/20 opacity-75"></span>
                     <span
-                      className="relative inline-block text-5xl font-bold animate-bounce text-brand-green2"
+                      className="relative inline-block text-5xl font-bold animate-bounce text-[#dec2e1]"
                       aria-hidden="true"
                     >
                       ↓
                     </span>
                   </div>
-                  <span className="text-lg font-semibold bg-gradient-to-r from-brand-green2 to-brand-green3 bg-clip-text text-transparent">
+                  <span className="text-lg font-semibold bg-gradient-to-r from-[#dec2e1] to-[#dec2e1] bg-clip-text text-transparent">
                     SIGN UP BELOW
                   </span>
                 </div>
@@ -173,7 +173,7 @@ const Alerts = () => {
               <CTA
                 text="Get your Property registered for Free"
                 href="/alert"
-                styling="w-full h-12 mt-8"
+                styling="w-full h-12 mt-8 bg-[#dec2e1] hover:bg-[#dec2e1]/80 text-[#141414]"
               />
             </div>
 
@@ -183,9 +183,9 @@ const Alerts = () => {
                 buttonObj={button}
                 onSubmit={(data) => console.log(data)}
                 containerClass="space-y-6 relative z-10 backdrop-blur-lg rounded-3xl p-6 md:p-8 transition-all duration-300 group/form"
-                inputClass="w-full rounded-xl text-brand-light placeholder-brand-gray3 focus:border-brand-light focus:ring-2 focus:ring-brand-light transition-all"
-                buttonClass="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-brand-green2 to-brand-green1 hover:from-brand-green1 hover:to-brand-green2 text-brand-light font-semibold px-8 py-4 rounded-xl transition-colors group-hover/form:shadow-lg group-hover/form:shadow-brand-green1/20"
-                errorClass="text-rose-400 mt-2 text-sm"
+                inputClass="w-full rounded-xl text-[#dec2e1] placeholder-[#dec2e1]/70 focus:border-[#dec2e1] focus:ring-2 focus:ring-[#dec2e1] transition-all"
+                buttonClass="w-full flex items-center justify-center gap-2 bg-[#dec2e1] hover:bg-[#dec2e1]/80 text-[#141414] font-semibold px-8 py-4 rounded-xl transition-colors group-hover/form:shadow-lg group-hover/form:shadow-[#dec2e1]/20"
+                errorClass="text-[#dec2e1]/70 mt-2 text-sm"
               />
             </div>
           </div>
