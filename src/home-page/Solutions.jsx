@@ -72,12 +72,18 @@ const Solutions = () => {
         className="container mx-auto px-6 md:px-12 lg:px-24"
         ref={containerRef}
       >
-        <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-conthrax font-bold mb-6 md:mb-10">
-            Solutions
-          </h1>
-          <div className="max-w-3xl mx-auto text-[#dec2e1]/70">
-            <p>
+        <div className="text-center mb-16 md:mb-24">
+          {/* Pills + Lines */}
+          <div className="flex items-center justify-center relative">
+            <div className="absolute left-0 right-0 h-[2px] bg-[#7af8c4]" />
+            <div className="px-6 py-2 bg-[#7af8c4] text-[#1e2b27] text-2xl md:text-3xl lg:text-4xl font-conthrax font-bold rounded-full shadow-md relative z-10">
+              Solutions
+            </div>
+          </div>
+
+          {/* Subtext */}
+          <div className="mt-6 text-[#dec2e1]/70 max-w-3xl mx-auto">
+            <p className="text-sm md:text-base">
               Teams like yours are using InCheck to manage critical onsite work:
             </p>
           </div>

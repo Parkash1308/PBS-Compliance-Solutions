@@ -1,27 +1,25 @@
 "use client";
 
 import CustomImage from "@/app/CustomImage";
-import CTA from "@/components/CTA";
-import Heading from "@/components/Heading";
-import MultiStepForm from "@/components/MultiStepForm";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Send } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Alerts = () => {
   const ref = useRef(null);
-  const leftRef = useRef(null);
-  const textRef = useRef(null);
+  const imageRef = useRef(null);
+  const contentRef = useRef(null);
   const formRef = useRef(null);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [formData, setFormData] = useState({});
 
   const formSteps = [
     {
       type: "text",
       name: "full_name",
-      placeholder: "Enter full name",
+      placeholder: "Enter Full Name",
       label: "Full Name",
       inputProps: {
         required: true,
@@ -29,44 +27,30 @@ const Alerts = () => {
         title: "Please enter at least 3 characters",
         autoComplete: "name",
       },
-      validate: (value) => {
-        if (!value) return "This field is required";
-        if (!/^[A-Za-z ]{3,}$/.test(value)) return "Invalid name format";
-        return null;
-      },
     },
     {
       type: "text",
-      name: "company name",
-      placeholder: "Enter company name",
+      name: "company_name",
+      placeholder: "Enter Company Name",
       label: "Company Name",
       inputProps: {
         required: true,
         autoComplete: "organization",
       },
-      validate: (value) => {
-        if (!value) return "Company name is required";
-        return null;
-      },
     },
     {
       type: "email",
       name: "email",
-      placeholder: "Enter your email",
+      placeholder: "Enter Your Email",
       inputProps: {
         required: true,
         autoComplete: "email",
-      },
-      validate: (value) => {
-        if (!value) return "Email is required";
-        if (!/^\S+@\S+\.\S+$/.test(value)) return "Invalid email format";
-        return null;
       },
     },
     {
       type: "tel",
       name: "phone",
-      placeholder: "Enter your phone",
+      placeholder: "Enter Your Phone",
       inputProps: {
         required: true,
         pattern: "[0-9]{10}",
@@ -74,11 +58,6 @@ const Alerts = () => {
       },
     },
   ];
-
-  const button = {
-    text: "Submit",
-    icon: Send,
-  };
 
   useEffect(() => {
     let tl = gsap.timeline({
@@ -90,24 +69,20 @@ const Alerts = () => {
       },
     });
 
-    if (leftRef.current) {
-      tl.from(leftRef.current, {
+    if (imageRef.current) {
+      tl.from(imageRef.current, {
         opacity: 0,
-        x: -50,
+        x: -30,
         duration: 0.8,
       });
     }
 
-    if (textRef.current) {
-      tl.from(
-        textRef.current,
-        {
-          opacity: 0,
-          y: 50,
-          duration: 0.8,
-        },
-        "-=0.4"
-      );
+    if (contentRef.current) {
+      tl.from(contentRef.current, {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+      }, "-=0.4");
     }
 
     if (formRef.current) {
@@ -115,7 +90,7 @@ const Alerts = () => {
         formRef.current,
         {
           opacity: 0,
-          y: 50,
+          y: 30,
           duration: 0.8,
         },
         "-=0.4"
@@ -123,70 +98,140 @@ const Alerts = () => {
     }
   }, []);
 
+  const handleNext = () => {
+    if (currentStep < formSteps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const handleBack = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (currentStep < formSteps.length - 1) {
+      handleNext();
+    } else {
+      console.log("Form Data:", formData);
+      // Handle form submission logic here
+    }
+  };
+
   return (
-    <div className="bg-[#38403e] text-[#8CBEBF] py-16" ref={ref}>
+    <div className="bg-[#38403e] text-white py-16" ref={ref}>
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
-        <div className="flex flex-col lg:flex-row lg:justify-center gap-16">
-          <div ref={leftRef} className="lg:w-1/2 relative hidden lg:block">
-            <div className="relative h-full w-full overflow-hidden rounded-2xl border-2 border-[#8CBEBF]/20 bg-gradient-to-br from-[#141414]/30 to-[#8CBEBF]/20">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+          {/* Building Image */}
+          <div ref={imageRef} className="lg:w-1/2 relative">
+            <div className="relative h-full w-full overflow-hidden rounded-2xl border-2 border-[#8AC1C1] bg-gradient-to-br from-[#141414]/30 to-[#8AC1C1]/20">
               <CustomImage
                 src="/PBS%20Assets/better-assets/Images%20Without%20Bg/Facebook%20Cover.webp"
                 height={100}
                 width={100}
-                alt="Notification alerts interface"
+                alt="Property building"
                 className="w-auto h-full rounded-2xl mix-blend-luminosity opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
           </div>
 
+          {/* Content and Form */}
           <div className="lg:w-1/2">
-            <div ref={textRef} className="mb-8">
-              <Heading
-                main="Alert System:"
-                subpart="Never Miss a Critical step for property again"
-                styling="mb-6 text-[#dec2e1]"
-              />
-              <div className="text-[#8CBEBF]/70 space-y-6">
-                <p className="text-lg leading-relaxed">
-                  Revolutionizing the industry by providing access to every
-                  demographic of data in real-time. Our enhanced alert system
-                  covers all relevant departments in New York City to ensure you
-                  never miss any critical step again. Free for the first 3
-                  months
-                </p>
-                <div className="relative flex items-center gap-4 pt-6">
-                  <div className="relative">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dec2e1]/20 opacity-75"></span>
-                    <span
-                      className="relative inline-block text-5xl font-bold animate-bounce text-[#dec2e1]"
-                      aria-hidden="true"
-                    >
-                      ↓
-                    </span>
+            <div ref={contentRef} className="mb-8">
+              {/* Vertical Lines */}
+              <div className="flex items-start mb-4">
+                <div className="w-4 bg-[#8AC1C1] h-24 mr-4"></div> {/* Increased height to h-24 */}
+                <div>
+                  {/* Heading Section */}
+                  <div className="mb-2">
+                    <p className="text-lg text-[#8CBEBF] mb-1">Never Miss a Critical step for property again</p>
+                    <h1 className="text-5xl font-bold text-white mb-6">Alert System:</h1>
                   </div>
-                  <span className="text-lg font-semibold bg-gradient-to-r from-[#dec2e1] to-[#dec2e1] bg-clip-text text-transparent">
-                    SIGN UP BELOW
-                  </span>
+
+                  {/* Description Section */}
+                  <div className="text-[#8CBEBF] mb-8">
+                    <p className="text-base leading-relaxed">
+                      Revolutionizing the industry by providing access to every demographic of data
+                      in real-time. Our enhanced alert system covers all relevant departments in
+                      New York City to ensure you never miss any critical step again. Free for the first
+                      3 months
+                    </p>
+                  </div>
                 </div>
               </div>
-              <CTA
-                text="Get your Property registered for Free"
-                href="/alert"
-                styling="w-full h-12 mt-8 bg-[#8AC1C1] hover:bg-[#8AC1C1]/80 text-[#141414]"
-              />
+
+              {/* Separator Line */}
+              <div className="w-16 h-1 bg-[#8AC1C1] mb-8"></div>
+
+              {/* Call to Action */}
+              <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-4 mb-8">
+                <div className="flex flex-col">
+                  <div className="font-bold text-xl text-white">SIGN UP</div>
+                  <div className="font-bold text-xl text-white">BELOW</div>
+                </div>
+                <a href="/alert" className="bg-[#8AC1C1] text-[#38403e] font-medium px-6 py-3 rounded-full inline-flex items-center space-x-2 w-fit hover:bg-[#8AC1C1]/90 transition-colors">
+                  <span>Get your Property registered for Free</span>
+                  <span>&rarr;</span>
+                </a>
+              </div>
             </div>
 
-            <div ref={formRef}>
-              <MultiStepForm
-                steps={formSteps}
-                buttonObj={button}
-                onSubmit={(data) => console.log(data)}
-                containerClass="space-y-6 relative z-10 backdrop-blur-lg rounded-3xl p-6 md:p-8 transition-all duration-300 group/form"
-                inputClass="w-full rounded-xl text-[#dec2e1] placeholder-[#dec2e1]/70 focus:border-[#dec2e1] focus:ring-2 focus:ring-[#dec2e1] transition-all"
-                buttonClass="w-full flex items-center justify-center gap-2 bg-[#dec2e1] hover:bg-[#dec2e1]/80 text-[#141414] font-semibold px-8 py-4 rounded-xl transition-colors group-hover/form:shadow-lg group-hover/form:shadow-[#dec2e1]/20"
-                errorClass="text-[#dec2e1]/70 mt-2 text-sm"
-              />
+            {/* Form Section */}
+            <div ref={formRef} className="bg-[#272b2a] rounded-lg shadow-lg p-8 w-full md:w-3/4 lg:w-3/4">
+              <form onSubmit={handleSubmit}>
+                <div className="mb-6">
+                  <input
+                    type={formSteps[currentStep].type}
+                    name={formSteps[currentStep].name}
+                    placeholder={formSteps[currentStep].placeholder}
+                    className="w-full bg-transparent border-0 border-b-2 border-[#8AC1C1]/30 text-xl text-white p-2 focus:outline-none focus:border-[#8AC1C1] placeholder-gray-500"
+                    required={formSteps[currentStep].inputProps.required}
+                    {...formSteps[currentStep].inputProps}
+                    value={formData[formSteps[currentStep].name] || ""}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                {/* Progress Indicator */}
+                <div className="mt-10 mb-4 relative">
+                  <div className="h-1 bg-[#8AC1C1]/30 rounded-full relative">
+                    <div
+                      className="absolute h-1 bg-[#8AC1C1] rounded-full"
+                      style={{ width: `${(currentStep / (formSteps.length - 1)) * 100}%` }}
+                    ></div>
+                    {/* Bullet Points */}
+                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-0 w-4 h-4 ${currentStep >= 0 ? 'bg-white' : 'bg-[#8AC1C1]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
+                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-1/3 w-4 h-4 ${currentStep >= 1 ? 'bg-white' : 'bg-[#8AC1C1]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
+                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-2/3 w-4 h-4 ${currentStep >= 2 ? 'bg-white' : 'bg-[#8AC1C1]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
+                    <div className={`absolute top-1/2 transform -translate-y-1/2 right-0 w-4 h-4 ${currentStep >= 3 ? 'bg-white' : 'bg-[#8AC1C1]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
+                  </div>
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className="flex justify-between mt-4">
+                  <button
+                    type="button"
+                    onClick={handleBack}
+                    className={`text-sm text-[#8AC1C1] ${currentStep === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    disabled={currentStep === 0}
+                  >
+                    ← Back
+                  </button>
+                  <button
+                    type="submit"
+                    className={`text-sm text-[#8AC1C1]`}
+                  >
+                    {currentStep === formSteps.length - 1 ? "Submit" : "Next →"}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

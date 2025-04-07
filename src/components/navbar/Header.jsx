@@ -45,7 +45,7 @@ const Header = () => {
     <div className="sticky top-0 right-0 z-50 w-full bg-brand-gray1 shadow-md">
       <motion.div
         ref={ref}
-        className="flex justify-center items-center h-[80px] md:h-[100px] sticky top-0" // Adjusted height for responsiveness
+        className="flex justify-left items-center h-[80px] md:h-[100px] sticky top-0" // Adjusted height for responsiveness
         initial={{ height: "100px" }}
       >
         <div
