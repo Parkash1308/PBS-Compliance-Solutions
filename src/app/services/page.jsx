@@ -96,11 +96,11 @@ const page = () => {
                 whileInView="visible"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true, amount: 0.2 }}
-                className="bg-[#38403e] text-[#dec2e1] rounded-lg p-6 shadow-md border border-[#8AC1C1]/20 hover:border-[#8AC1C1] transition-all duration-300 text-center flex flex-col justify-center items-center gap-8 sm:w-[80%] md:w-[85%] lg:w-[90%] mx-auto"
+                className="bg-[#1a1a1a] text-[#dec2e1] rounded-lg p-6 shadow-md border border-[#8AC1C1]/20 hover:border-[#8AC1C1] transition-all duration-300 text-center flex flex-col justify-center items-center gap-8 sm:w-[80%] md:w-[85%] lg:w-[90%] mx-auto"
               >
                 <div className="mb-4 text-2xl">{service.icon}</div>
 
-                <div className=" bg-[#38403e] text-[#dec2e1]">
+                <div className=" bg-[#1a1a1a] text-[#dec2e1]">
                   <h2 className="text-xl font-bold text-[#dec2e1] mb-2">
                     {service.title}
                   </h2>

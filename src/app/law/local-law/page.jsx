@@ -10,7 +10,7 @@ const page = () => {
       {/* Hero section as full-width header */}
       <HeroSection
         heading="Avoid Fines, Prevent Disasters, Protect your Legacy"
-        text="Local Law 11 Compliance isn’t just a mandate, it’s your building lifeline. Let PBS 
+        text="Local Law 11 Compliance isn’t just a mandate, it’s your building lifeline. Let PBS
           Handle the complexities while you focus on what matters."
         staggerVal={0.1}
       />
@@ -25,11 +25,11 @@ const page = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-semibold mb-4 text-white">
+            <h2 className="text-2xl font-semibold mb-4 text-[#8AC1C1]">
               {localLaw.whyLl11.heading}
             </h2>
             <p className="text-lg text-brand-midGray mb-4">
-              <span className="font-bold text-green-500">
+              <span className="font-bold text-white">
                 {localLaw.whyLl11.subheadline}
               </span>
             </p>
@@ -46,21 +46,21 @@ const page = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h2 className="text-2xl font-semibold mb-4 text-white">
+            <h2 className="text-2xl font-semibold mb-4 text-[#8AC1C1]">
               {localLaw.ourServices.heading}
             </h2>
             <p className="text-lg text-brand-midGray mb-4">
-              <span className="font-bold text-blue-500">
+              <span className="font-bold text-white">
                 {localLaw.ourServices.subheadline}
               </span>
             </p>
             {localLaw.ourServices.services.map((service, index) => (
               <div key={index} className="mb-6">
-                <h3 className="text-xl font-semibold mb-2 text-white">
+                <h3 className="text-xl font-semibold mb-2 text-[#8AC1C1]">
                   {service.heading}
                 </h3>
                 {service.subheading && (
-                  <h4 className="text-lg font-medium mb-2 text-brand-midGray">
+                  <h4 className="text-lg font-medium mb-2 text-white">
                     {service.subheading}
                   </h4>
                 )}
@@ -90,7 +90,7 @@ const page = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <h2 className="text-2xl font-semibold mb-4 text-white">
+            <h2 className="text-2xl font-semibold mb-4 text-[#8AC1C1]">
               {localLaw.pbsProcess.heading}
             </h2>
             <div
@@ -106,7 +106,7 @@ const page = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <h2 className="text-2xl font-semibold mb-4 text-white">
+            <h2 className="text-2xl font-semibold mb-4 text-[#8AC1C1]">
               {localLaw.whyChoosePbs.heading}
             </h2>
             <ul className="list-disc list-inside text-brand-midGray">
@@ -125,7 +125,7 @@ const page = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.0 }}
           >
-            <h2 className="text-2xl font-semibold mb-4 text-white">
+            <h2 className="text-2xl font-semibold mb-4 text-[#8AC1C1]">
               {localLaw.ctaSection.heading}
             </h2>
             <div className="flex flex-wrap gap-2">

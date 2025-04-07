@@ -19,7 +19,7 @@ City’s regulations is crucial for safety and legal adherence."
           {hydrostaticTestingData.map((sectionData) => (
             <motion.div
               key={sectionData.section}
-              className="group bg-[#1a1a1a] rounded-2xl border border-[#8AC1C1] p-8 md:p-12 shadow-2xl shadow-black/50 hover:border-[#00cc6a]/30 transition-colors duration-300"
+              className="group bg-[#1a1a1a] rounded-2xl border border-[#8AC1C1] p-8 md:p-12 shadow-2xl shadow-black/50 hover:border-[#8AC1C1]/30 transition-colors duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -27,7 +27,7 @@ City’s regulations is crucial for safety and legal adherence."
             >
               {/* Section Header */}
               <div className="mb-10 text-center space-y-6">
-                <h1 className="text-3xl md:text-4xl font-gnuolane text-white mb-4 bg-gradient-to-r from-[#00cc6a] to-[#22d3ee] bg-clip-text text-transparent">
+                <h1 className="text-3xl md:text-4xl font-gnuolane text-white mb-4 bg-gradient-to-r from-[#8AC1C1] to-[#8AC1C1] bg-clip-text text-transparent">
                   {sectionData.headline}
                 </h1>
                 {sectionData.bodyText && (
@@ -43,9 +43,9 @@ City’s regulations is crucial for safety and legal adherence."
                   {sectionData.steps.map((step, index) => (
                     <div
                       key={index}
-                      className="flex items-start space-x-6 p-6 bg-[#252525] rounded-xl border border-[#8AC1C1] hover:border-[#00cc6a]/30 transition-colors"
+                      className="flex items-start space-x-6 p-6 bg-[#252525] rounded-xl border border-[#8AC1C1] hover:border-[#8AC1C1]/30 transition-colors"
                     >
-                      <div className="flex-shrink-0 w-12 h-12 bg-[#00cc6a] rounded-full flex items-center justify-center text-black font-bold text-xl">
+                      <div className="flex-shrink-0 w-12 h-12 bg-[#8AC1C1] rounded-full flex items-center justify-center text-black font-bold text-xl">
                         {index + 1}
                       </div>
                       <div className="space-y-2">
@@ -61,7 +61,7 @@ City’s regulations is crucial for safety and legal adherence."
               {sectionData.colorCodes && (
                 <div className="mt-12 overflow-x-auto rounded-xl border border-[#8AC1C1]">
                   <table className="min-w-full bg-[#1a1a1a] divide-y-2 divide-gray-800">
-                    <thead className="bg-gradient-to-r from-[#00cc6a]/20 to-[#22d3ee]/20">
+                    <thead className="bg-gradient-to-r from-[#8AC1C1]/20 to-[#8AC1C1]/20">
                       <tr>
                         <th className="py-5 px-8 text-left text-gray-300 font-semibold uppercase text-sm tracking-wider border-r-2 border-gray-800">
                           Cap Color
@@ -102,9 +102,9 @@ City’s regulations is crucial for safety and legal adherence."
                   {sectionData.inspectionPhases.map((phase, index) => (
                     <div
                       key={index}
-                      className="p-6 bg-[#252525] rounded-xl border border-[#8AC1C1] hover:border-[#00cc6a]/30 transition-colors"
+                      className="p-6 bg-[#252525] rounded-xl border border-[#8AC1C1] hover:border-[#8AC1C1]/30 transition-colors"
                     >
-                      <h3 className="text-xl font-semibold text-[#00cc6a] mb-4 border-l-4 border-[#00cc6a] pl-4">
+                      <h3 className="text-xl font-semibold text-[#8AC1C1] mb-4 border-l-4 border-[#8AC1C1] pl-4">
                         {phase.phase}
                       </h3>
                       <ul className="space-y-3 pl-6">
@@ -113,7 +113,7 @@ City’s regulations is crucial for safety and legal adherence."
                             key={detailIndex}
                             className="flex items-start space-x-3 text-brand-midGray"
                           >
-                            <div className="w-2 h-2 bg-[#00cc6a] rounded-full mt-2 flex-shrink-0" />
+                            <div className="w-2 h-2 bg-[#8AC1C1] rounded-full mt-2 flex-shrink-0" />
                             <span>{detail}</span>
                           </li>
                         ))}
@@ -126,7 +126,7 @@ City’s regulations is crucial for safety and legal adherence."
               {/* Features */}
               {sectionData.features && (
                 <div className="mt-12 p-6 bg-[#252525] rounded-xl border border-[#8AC1C1]">
-                  <h3 className="text-2xl font-semibold text-white mb-6 bg-gradient-to-r from-[#00cc6a] to-[#22d3ee] bg-clip-text text-transparent">
+                  <h3 className="text-2xl font-semibold text-white mb-6 bg-gradient-to-r from-[#8AC1C1] to-[#8AC1C1] bg-clip-text text-transparent">
                     Key Features
                   </h3>
                   <ul className="space-y-4">
@@ -135,7 +135,7 @@ City’s regulations is crucial for safety and legal adherence."
                         key={index}
                         className="flex items-start space-x-3 text-brand-midGray"
                       >
-                        <div className="w-2 h-2 bg-[#00cc6a] rounded-full mt-2 flex-shrink-0" />
+                        <div className="w-2 h-2 bg-[#8AC1C1] rounded-full mt-2 flex-shrink-0" />
                         <span className="text-lg">{feature}</span>
                       </li>
                     ))}
@@ -143,7 +143,6 @@ City’s regulations is crucial for safety and legal adherence."
                 </div>
               )}
 
-              {/* Call to Action */}
               {/* Call to Action */}
               {sectionData.callToAction && (
                 <div className="mt-12 text-center space-y-8">
@@ -173,9 +172,9 @@ City’s regulations is crucial for safety and legal adherence."
                   {sectionData.trustSignals.map((signal, index) => (
                     <div
                       key={index}
-                      className="bg-[#252525] text-brand-midGray py-2 px-4 rounded-full text-sm flex items-center space-x-2 border border-[#00cc6a]/30"
+                      className="bg-[#252525] text-brand-midGray py-2 px-4 rounded-full text-sm flex items-center space-x-2 border border-[#8AC1C1]/30"
                     >
-                      <div className="w-2 h-2 bg-[#00cc6a] rounded-full" />
+                      <div className="w-2 h-2 bg-[#8AC1C1] rounded-full" />
                       <span>{signal}</span>
                     </div>
                   ))}
