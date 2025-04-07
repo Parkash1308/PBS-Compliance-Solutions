@@ -19,7 +19,7 @@ City’s regulations is crucial for safety and legal adherence."
           {hydrostaticTestingData.map((sectionData) => (
             <motion.div
               key={sectionData.section}
-              className="group bg-[#1a1a1a] rounded-2xl border-2 border-gray-800 p-8 md:p-12 shadow-2xl shadow-black/50 hover:border-[#00cc6a]/30 transition-colors duration-300"
+              className="group bg-[#1a1a1a] rounded-2xl border border-[#8AC1C1] p-8 md:p-12 shadow-2xl shadow-black/50 hover:border-[#00cc6a]/30 transition-colors duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -43,7 +43,7 @@ City’s regulations is crucial for safety and legal adherence."
                   {sectionData.steps.map((step, index) => (
                     <div
                       key={index}
-                      className="flex items-start space-x-6 p-6 bg-[#252525] rounded-xl border-2 border-gray-800 hover:border-[#00cc6a]/30 transition-colors"
+                      className="flex items-start space-x-6 p-6 bg-[#252525] rounded-xl border border-[#8AC1C1] hover:border-[#00cc6a]/30 transition-colors"
                     >
                       <div className="flex-shrink-0 w-12 h-12 bg-[#00cc6a] rounded-full flex items-center justify-center text-black font-bold text-xl">
                         {index + 1}
@@ -59,7 +59,7 @@ City’s regulations is crucial for safety and legal adherence."
 
               {/* Color Codes Table */}
               {sectionData.colorCodes && (
-                <div className="mt-12 overflow-x-auto rounded-xl border-2 border-gray-800">
+                <div className="mt-12 overflow-x-auto rounded-xl border border-[#8AC1C1]">
                   <table className="min-w-full bg-[#1a1a1a] divide-y-2 divide-gray-800">
                     <thead className="bg-gradient-to-r from-[#00cc6a]/20 to-[#22d3ee]/20">
                       <tr>
@@ -102,7 +102,7 @@ City’s regulations is crucial for safety and legal adherence."
                   {sectionData.inspectionPhases.map((phase, index) => (
                     <div
                       key={index}
-                      className="p-6 bg-[#252525] rounded-xl border-2 border-gray-800 hover:border-[#00cc6a]/30 transition-colors"
+                      className="p-6 bg-[#252525] rounded-xl border border-[#8AC1C1] hover:border-[#00cc6a]/30 transition-colors"
                     >
                       <h3 className="text-xl font-semibold text-[#00cc6a] mb-4 border-l-4 border-[#00cc6a] pl-4">
                         {phase.phase}
@@ -125,7 +125,7 @@ City’s regulations is crucial for safety and legal adherence."
 
               {/* Features */}
               {sectionData.features && (
-                <div className="mt-12 p-6 bg-[#252525] rounded-xl border-2 border-gray-800">
+                <div className="mt-12 p-6 bg-[#252525] rounded-xl border border-[#8AC1C1]">
                   <h3 className="text-2xl font-semibold text-white mb-6 bg-gradient-to-r from-[#00cc6a] to-[#22d3ee] bg-clip-text text-transparent">
                     Key Features
                   </h3>
@@ -153,13 +153,13 @@ City’s regulations is crucial for safety and legal adherence."
                   <div className="flex flex-col md:flex-row justify-center gap-6">
                     <a
                       href={`tel:${sectionData.callToAction.contact.call}`}
-                      className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto"
+                      className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer w-full md:w-auto"
                     >
                       {sectionData.callToAction.contact.call}
                     </a>
                     <a
                       href={`mailto:${sectionData.callToAction.contact.email}`}
-                      className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto"
+                      className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer w-full md:w-auto"
                     >
                       {sectionData.callToAction.contact.email}
                     </a>

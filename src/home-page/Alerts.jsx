@@ -124,11 +124,11 @@ const Alerts = () => {
   }, []);
 
   return (
-    <div className="bg-[#38403e] text-[#dec2e1]py-16" ref={ref}>
+    <div className="bg-[#38403e] text-[#8CBEBF] py-16" ref={ref}>
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex flex-col lg:flex-row lg:justify-center gap-16">
           <div ref={leftRef} className="lg:w-1/2 relative hidden lg:block">
-            <div className="relative h-full w-full overflow-hidden rounded-2xl border-2 border-[#dec2e1]/20 bg-gradient-to-br from-[#141414]/30 to-[#dec2e1]/20">
+            <div className="relative h-full w-full overflow-hidden rounded-2xl border-2 border-[#8CBEBF]/20 bg-gradient-to-br from-[#141414]/30 to-[#8CBEBF]/20">
               <CustomImage
                 src="/PBS%20Assets/better-assets/Images%20Without%20Bg/Facebook%20Cover.webp"
                 height={100}
@@ -147,7 +147,7 @@ const Alerts = () => {
                 subpart="Never Miss a Critical step for property again"
                 styling="mb-6 text-[#dec2e1]"
               />
-              <div className="text-[#dec2e1]/70 space-y-6">
+              <div className="text-[#8CBEBF]/70 space-y-6">
                 <p className="text-lg leading-relaxed">
                   Revolutionizing the industry by providing access to every
                   demographic of data in real-time. Our enhanced alert system
@@ -173,7 +173,7 @@ const Alerts = () => {
               <CTA
                 text="Get your Property registered for Free"
                 href="/alert"
-                styling="w-full h-12 mt-8 bg-[#dec2e1] hover:bg-[#dec2e1]/80 text-[#141414]"
+                styling="w-full h-12 mt-8 bg-[#8AC1C1] hover:bg-[#8AC1C1]/80 text-[#141414]"
               />
             </div>
 

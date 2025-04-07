@@ -16,7 +16,7 @@ const page = () => {
       <div className="py-16 px-6 md:px-12 lg:px-24">
         <section className="container mx-auto sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%]">
           <motion.div
-            className="bg-brand-dark1 p-8 rounded-lg shadow-md mb-8 border-l-4 border-green-500"
+            className="bg-brand-dark1 p-8 rounded-lg shadow-md mb-8 border border-[#8AC1C1]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -31,7 +31,7 @@ const page = () => {
           </motion.div>
 
           <motion.div
-            className="bg-brand-dark2 p-8 rounded-lg shadow-md mb-8 border-l-4 border-blue-500"
+            className="bg-brand-dark2 p-8 rounded-lg shadow-md mb-8 border border-[#8AC1C1]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -46,7 +46,7 @@ const page = () => {
           </motion.div>
 
           <motion.div
-            className="bg-brand-dark3 p-8 rounded-lg shadow-md mb-8 border-l-4 border-orange-500"
+            className="bg-brand-dark3 p-8 rounded-lg shadow-md mb-8 border border-[#8AC1C1]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -61,7 +61,7 @@ const page = () => {
           </motion.div>
 
           <motion.div
-            className="bg-brand-dark5 p-8 rounded-lg shadow-md mb-8 border-l-4 border-purple-500"
+            className="bg-brand-dark5 p-8 rounded-lg shadow-md mb-8 border border-[#8AC1C1]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.0 }}
@@ -76,7 +76,7 @@ const page = () => {
           </motion.div>
 
           <motion.div
-            className="bg-brand-dark6 p-8 rounded-lg shadow-md border-l-4 border-deep-purple-500"
+            className="bg-brand-dark6 p-8 rounded-lg shadow-md border border-[#8AC1C1]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}

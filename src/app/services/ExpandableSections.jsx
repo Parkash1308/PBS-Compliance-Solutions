@@ -69,12 +69,12 @@ const SectionList = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                className={`relative cursor-pointer bg-[#38403e] rounded-2xl shadow-2xl ${expandedId === section.id ? "border-[#dec2e1]" : ""
+                className={`relative cursor-pointer bg-[#38403e] rounded-2xl shadow-2xl ${expandedId === section.id ? "border-[#8AC1C1]" : ""
                   } sm:w-[80%] md:w-[65%] lg:w-[80%] xl:w-[75%] mx-auto`}
               >
                 <motion.div
                   layout
-                  className={`flex flex-col lg:flex-row items-center md:mx-auto justify-center xl:gap-16 bg-[#2d3230] rounded-lg shadow-lg overflow-hidden rounded-full`}
+                  className={`flex flex-col lg:flex-row items-center md:mx-auto justify-center xl:gap-16 bg-[#8AC1C1]] rounded-lg shadow-lg overflow-hidden rounded-full`}
                 >
                   <div className="w-full lg:w-2/5 2xl:w-1/5 h-48 lg:h-64">
                     <CustomImage
@@ -218,7 +218,7 @@ const SectionList = () => {
 
                               <div className="space-y-4 p-14 pb-0">
                                 {mainSections[index].faq.items.map((faq, index) => (
-                                  <div key={index} className="border-b border-[#444444] pb-4">
+                                  <div key={index} className="border-b border-[#8AC1C1] pb-4">
                                     <h3 className="text-[#dec2e1] font-semibold mb-2">{faq.question}</h3>
                                     <p className="text-[#dec2e1]/70">{faq.answer}</p>
                                   </div>

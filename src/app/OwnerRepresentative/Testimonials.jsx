@@ -54,7 +54,7 @@ const page = () => {
   ];
 
   return (
-    <section className="bg-brand-darkGray text-brand-midGray py-32 px-6 md:px-12 lg:px-24">
+    <section className="bg-[#38403e] text-[#dec2e1] py-32 px-6 md:px-12 lg:px-24">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <motion.h3
@@ -87,7 +87,7 @@ const page = () => {
               whileInView="visible"
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="bg-brand-dark1 rounded-lg p-6 shadow-md border border-green-600 hover:border-brand-bright transition-all duration-300 text-center flex flex-col justify-center items-center gap-8"
+              className="bg-brand-dark1 rounded-lg p-6 shadow-md border border-[#8AC1C1]  hover:border-[#8AC1C1] transition-all duration-300 text-center flex flex-col justify-center items-center gap-8"
             >
               <div className="mb-4 text-2xl">{feature.icon}</div>
 

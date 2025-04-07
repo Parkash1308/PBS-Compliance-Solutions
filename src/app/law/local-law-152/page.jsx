@@ -17,12 +17,7 @@ const page = () => {
       <div className="py-16 px-6 md:px-12 lg:px-24">
         <section className="container mx-auto sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%]">
           {Object.entries(ll152).map(([key, section], index) => {
-            let borderColor = "border-green-500"; // Default green
-            if (index % 3 === 1) {
-              borderColor = "border-blue-500"; // Blue for the second section
-            } else if (index % 3 === 2) {
-              borderColor = "border-orange-500"; // Orange for the third section
-            }
+            let borderColor = "border-[#8AC1C1]"; // Default border color
 
             return (
               <motion.div

@@ -18,7 +18,7 @@ const Page = () => {
           {elevatorComplianceData.map((sectionData) => (
             <motion.div
               key={sectionData.section}
-              className="group bg-[#1a1a1a] rounded-2xl border-2 border-gray-800 p-8 md:p-12 shadow-2xl shadow-black/50 hover:border-brand-bright/30 transition-colors duration-300"
+              className="group bg-[#1a1a1a] rounded-2xl border border-[#8AC1C1] p-8 md:p-12 shadow-2xl shadow-black/50 hover:border-brand-bright/30 transition-colors duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -38,7 +38,7 @@ const Page = () => {
 
               {/* Scenarios Table */}
               {sectionData.scenarios && (
-                <div className="mb-12 overflow-x-auto rounded-xl border-2 border-gray-800">
+                <div className="mb-12 overflow-x-auto rounded-xl border border-[#8AC1C1]">
                   <table className="min-w-full bg-[#1a1a1a] divide-y-2 divide-gray-800">
                     <thead className="bg-[#252525]">
                       <tr>
@@ -102,7 +102,7 @@ const Page = () => {
                   {sectionData.services.map((service, index) => (
                     <div
                       key={index}
-                      className="bg-[#252525] rounded-xl p-6 border-2 border-gray-800 hover:border-brand-bright/30 transition-colors"
+                      className="bg-[#252525] rounded-xl p-6 border border-[#8AC1C1] hover:border-brand-bright/30 transition-colors"
                     >
                       <h3 className="text-2xl font-semibold text-brand-bright mb-4">
                         {service.title}
@@ -136,7 +136,7 @@ const Page = () => {
                     {sectionData.steps.map((step, index) => (
                       <div
                         key={index}
-                        className="flex items-start space-x-6 p-6 bg-[#252525] rounded-xl border-2 border-gray-800 hover:border-brand-bright/30 transition-colors"
+                        className="flex items-start space-x-6 p-6 bg-[#252525] rounded-xl border border-[#8AC1C1] hover:border-brand-bright/30 transition-colors"
                       >
                         <div className="flex-shrink-0 w-12 h-12 bg-brand-bright rounded-full flex items-center justify-center text-black font-bold text-xl">
                           {index + 1}

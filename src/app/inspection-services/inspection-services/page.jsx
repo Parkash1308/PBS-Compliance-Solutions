@@ -49,7 +49,7 @@ const ParkingPage = () => {
               {sectionData.headline && (
                 <motion.div
                   variants={itemVariants}
-                  className="bg-[#1A1A1A] p-8 rounded-lg shadow-md mb-8 border-l-4 border-[#4CAF50] text-center"
+                  className="bg-[#1A1A1A] p-8 rounded-lg shadow-md mb-8 border-l-4 border-[#8AC1C1] text-center"
                 >
                   <h2 className="text-2xl font-semibold mb-4 text-white">
                     {sectionData.headline}
@@ -66,7 +66,7 @@ const ParkingPage = () => {
                     <motion.div
                       key={`subsection-${sectionIndex}-${subIndex}`}
                       variants={itemVariants}
-                      className="bg-[#1A1A1A] p-8 rounded-lg shadow-md mb-8 border-l-4 border-[#4CAF50] text-center"
+                      className="bg-[#1A1A1A] p-8 rounded-lg shadow-md mb-8 border-l-4 border-[#8AC1C1] text-center"
                     >
                       <h3 className="text-xl font-bold text-white mb-2">
                         {subSection.headline}
@@ -96,7 +96,7 @@ const ParkingPage = () => {
                     <motion.div
                       key={`service-${sectionIndex}-${serviceIndex}`}
                       variants={cardVariants}
-                      className="bg-[#333333] rounded-lg p-6 shadow-md border-l-4 border-[#2196F3] flex flex-col"
+                      className="bg-[#333333] rounded-lg p-6 shadow-md border-l-4 border-[#8AC1C1] flex flex-col"
                     >
                       <div className="text-center mb-4">
                         <div className="text-2xl inline-flex items-center justify-center">

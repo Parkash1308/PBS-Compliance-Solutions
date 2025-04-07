@@ -33,7 +33,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div className="overflow-x-auto rounded-xl border border-gray-800 shadow-2xl shadow-black/50">
+            <div className="overflow-x-auto rounded-xl border border-[#8AC1C1] shadow-2xl shadow-black/50">
               <table className="min-w-full bg-[#1a1a1a] divide-y divide-gray-800">
                 <thead className="bg-[#252525]">
                   <tr>
@@ -79,7 +79,7 @@ const Page = () => {
             </div>
 
             {/* Enhanced Additional Text Section */}
-            <div className="mt-12 bg-[#1a1a1a] rounded-xl border border-gray-800 shadow-2xl shadow-black/50 p-8 md:p-12">
+            <div className="mt-12 bg-[#1a1a1a] rounded-xl border border-[#8AC1C1] shadow-2xl shadow-black/50 p-8 md:p-12">
               <div className="space-y-8">
                 <p className="text-brand-midGray text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto">
                   {boilerComplianceData[0].additionalText[0]}
@@ -120,7 +120,7 @@ const Page = () => {
           {/* Compliance Solutions Section */}
           {boilerComplianceData[1] && (
             <motion.div
-              className="bg-[#1a1a1a] rounded-2xl border border-gray-800 p-8 md:p-12 shadow-2xl shadow-black/50"
+              className="bg-[#1a1a1a] rounded-2xl border border-[#8AC1C1] p-8 md:p-12 shadow-2xl shadow-black/50"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -135,7 +135,7 @@ const Page = () => {
                   {boilerComplianceData[1].services.map((service, index) => (
                     <div
                       key={index}
-                      className="bg-[#252525] rounded-xl p-6 md:p-8 border border-gray-800"
+                      className="bg-[#252525] rounded-xl p-6 md:p-8 border border-[#8AC1C1]"
                     >
                       <h3 className="text-2xl font-semibold text-brand-bright mb-4">
                         {service.title}
@@ -204,7 +204,7 @@ const Page = () => {
           {/* Compliance Roadmap Section */}
           {boilerComplianceData[2] && (
             <motion.div
-              className="bg-[#1a1a1a] rounded-2xl border border-gray-800 p-8 md:p-12 shadow-2xl shadow-black/50"
+              className="bg-[#1a1a1a] rounded-2xl border border-[#8AC1C1] p-8 md:p-12 shadow-2xl shadow-black/50"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -224,7 +224,7 @@ const Page = () => {
                   {boilerComplianceData[2].steps.map((step, index) => (
                     <div
                       key={index}
-                      className="flex items-start space-x-6 p-6 bg-[#252525] rounded-xl border border-gray-800 hover:border-brand-bright/30 transition-colors"
+                      className="flex items-start space-x-6 p-6 bg-[#252525] rounded-xl border border-[#8AC1C1] hover:border-brand-bright/30 transition-colors"
                     >
                       <div className="flex-shrink-0 w-12 h-12 bg-brand-bright rounded-full flex items-center justify-center text-black font-bold text-xl">
                         {index + 1}
@@ -243,7 +243,7 @@ const Page = () => {
           {/* CTA Section */}
           {boilerComplianceData[3] && (
             <motion.div
-              className="bg-[#1a1a1a] rounded-2xl border border-gray-800 p-8 md:p-12 text-center shadow-2xl shadow-black/50"
+              className="bg-[#1a1a1a] rounded-2xl border border-[#8AC1C1] p-8 md:p-12 text-center shadow-2xl shadow-black/50"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -257,13 +257,13 @@ const Page = () => {
                 <div className="flex flex-col md:flex-row justify-center gap-4">
                   <a
                     href={boilerComplianceData[3].callToAction.button1.href}
-                    className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto"
+                    className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer w-full md:w-auto"
                   >
                     {boilerComplianceData[3].callToAction.button1.text}
                   </a>
                   <a
                     href={boilerComplianceData[3].callToAction.button2.href}
-                    className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto"
+                    className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer w-full md:w-auto"
                   >
                     {boilerComplianceData[3].callToAction.button2.text}
                   </a>

@@ -73,7 +73,7 @@ const Services = () => {
             </p>
           </div>
           <div className="mt-10">
-            <CTA text="Know more about us" href="/about-us" styling="bg-[#dec2e1] hover:bg-[#dec2e1]/80 text-[#141414]" />
+            <CTA text="Know more about us" href="/about-us" styling="bg-[#8AC1C1] hover:bg-[#8AC1C1]/80 text-[#141414]" />
           </div>
         </div>
 
@@ -116,7 +116,7 @@ const Services = () => {
                     </li>
                   ))}
                   <div className="text-center mt-4 md:pl-2">
-                    <CTA text="Our Offerings" href="/services" styling="bg-[#dec2e1] hover:bg-[#dec2e1]/80 text-[#141414]" />
+                    <CTA text="Our Offerings" href="/services" styling="bg-[#8AC1C1] hover:bg-[#8AC1C1]/80 text-[#141414]" />
                   </div>
                 </ul>
               ) : (

@@ -21,16 +21,7 @@ processes through the assessments of our qualified licensed experts"
           {parkingArray.map((item, index) => (
             <motion.div
               key={index}
-              className={`bg-brand-dark1 p-8 rounded-lg shadow-md mb-8 border-l-4 border-${index % 5 === 0
-                ? "green-500"
-                : index % 5 === 1
-                  ? "blue-500"
-                  : index % 5 === 2
-                    ? "orange-500"
-                    : index % 5 === 3
-                      ? "purple-500"
-                      : "deep-purple-500"
-                }`}
+              className={`bg-brand-dark1 p-8 rounded-lg shadow-md mb-8 border-l-4 border-[#8AC1C1]`} // Set border color to #8AC1C1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}

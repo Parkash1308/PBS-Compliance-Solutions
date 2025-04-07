@@ -39,7 +39,7 @@ const PageContent = () => {
         <div className="w-full lg:w-1/3 relative mb-8 lg:mb-0">
           {/* Green Circle */}
           <motion.div
-            className="absolute top-1/6 left-1/5 transform -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[450px] h-[300px] md:h-[450px] bg-[#dec2e1] rounded-full"
+            className="absolute top-1/6 left-1/5 transform -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[450px] h-[300px] md:h-[450px] bg-[#8AC1C1] rounded-full"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
@@ -65,7 +65,7 @@ const PageContent = () => {
 
         {/* Right Side: Text Content */}
         <motion.div
-          className="w-full lg:w-1/2 text-[#dec2e1] text-center lg:text-left"
+          className="w-full lg:w-1/2 text-white text-center lg:text-left"
           initial="hidden"
           animate="visible"
           transition={{ staggerChildren: 0.2 }}
@@ -101,7 +101,7 @@ const PageContent = () => {
             More than 100 Years Combined Experience in the industry.
           </motion.p>
 
-          <CTA text="Schedule your Consultation Today" href="/contacts" styling="bg-[#38403e] hover:bg-[#38403e]/80 text-[#dec2e1]" />
+          <CTA text="Schedule your Consultation Today" href="/contacts" styling="bg-[#8AC1C1] hover:bg-[#38403e]/80 text-[black]" />
         </motion.div>
       </div>
     </div>

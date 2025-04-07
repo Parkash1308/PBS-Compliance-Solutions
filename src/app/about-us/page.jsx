@@ -21,21 +21,22 @@ const page = () => {
         text="For Decades, we’ve followed the rules of Inspection, Expediting and portfolio management, Not as Outsiders, but as neighbors, collaborators, and guardians of this city’s skyline."
       />
 
-
-
       {/* Main content section with dark background and responsive padding */}
-      <section className="bg-[#38403e] text-[#dec2e1] px-6 md:px-16 lg:px-24 py-12 py-[150px] xl:py-[200px]">
+      <section className="bg-[#38403e] text-[#8CBEBF] px-6 md:px-16 lg:px-24 py-12 py-[150px] xl:py-[200px]">
         <div className="container mx-auto">
-          {/* Our Story and Our Vision in two columns with green border */}
+          {/* Our Story and Our Vision in two columns with #8AC1C1 border */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {aboutContent
-              .filter((section) => section.id === "our-story" || section.id === "our-vision")
+              .filter(
+                (section) =>
+                  section.id === "our-story" || section.id === "our-vision"
+              )
               .map((section) => (
                 <div
                   key={section.id}
-                  className="p-6 border border-green-600 rounded-lg shadow-md"
+                  className="p-6 border border-[#8AC1C1] rounded-lg shadow-md"
                 >
-                  <h3 className="text-green-400 font-semibold uppercase tracking-wide my-2">
+                  <h3 className="text-[#8AC1C1] font-semibold uppercase tracking-wide my-2">
                     About Us
                   </h3>
                   <h1 className="text-4xl font-bold leading-tight my-4">
@@ -62,12 +63,15 @@ const page = () => {
               ))}
           </div>
 
-          {/* Our Mission with green border */}
+          {/* Our Mission with #8AC1C1 border */}
           <div className="mb-16">
             {aboutContent
               .filter((section) => section.id === "our-mission")
               .map((section) => (
-                <div key={section.id} className="p-6 border border-green-600 rounded-lg shadow-md">
+                <div
+                  key={section.id}
+                  className="p-6 border border-[#8AC1C1] rounded-lg shadow-md"
+                >
                   <h2 className="text-2xl font-bold my-4">{section.tagline}</h2>
                   <p className="text-gray-300 my-6">{section.body}</p>
                   <div className="py-6">
@@ -82,12 +86,15 @@ const page = () => {
               ))}
           </div>
 
-          {/* Service Areas with green border */}
+          {/* Service Areas with #8AC1C1 border */}
           <div className="mb-16">
             {aboutContent
               .filter((section) => section.id === "service-areas")
               .map((section) => (
-                <div key={section.id} className="p-6 border border-green-600 rounded-lg shadow-md">
+                <div
+                  key={section.id}
+                  className="p-6 border border-[#8AC1C1] rounded-lg shadow-md"
+                >
                   <h2 className="text-2xl font-bold my-4">{section.headline}</h2>
                   <p className="text-gray-300 my-6">{section.body}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-6">
@@ -123,14 +130,14 @@ const page = () => {
               ))}
           </div>
 
-          {/* CTA with green border */}
-          <div className="p-6 border border-green-600 rounded-lg shadow-md">
+          {/* CTA with #8AC1C1 border */}
+          <div className="p-6 border border-[#8AC1C1] rounded-lg shadow-md">
             {aboutContent
               .filter((section) => section.id === "cta")
               .map((section) => (
                 <div key={section.id}>
                   <p className="text-gray-300 my-6">{section.text}</p>
-                  <button className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer ${styling} w-full md:w-auto">
+                  <button className="bg-[#A9CED1] hover:bg-[#91B8BE] text-black font-semibold py-3 px-4 md:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-center justify-center gap-2 mt-10 cursor-pointer w-full md:w-auto">
                     {section.buttonText}
                   </button>
                 </div>
