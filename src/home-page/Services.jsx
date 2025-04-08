@@ -45,7 +45,7 @@ const Services = () => {
                 height={70}
                 className="object-contain mr-2"
               />
-              <div className="h-20 border-l-4 border-[#8AC1C1] px-2" />
+              <div className="h-20 border-l-4 border-[#7af8c4] px-2" />
               <div>
                 <p className="font-semibold text-2xl ">Introduction to</p>
                 <h2 className="text-6xl font-bold">PBS</h2>
@@ -67,7 +67,7 @@ const Services = () => {
           <CTA
             text="Know more about us"
             href="/about-us"
-            styling="bg-[#8AC1C1] hover:bg-[#50f0c6]/80 text-[#141414] w-fit"
+            styling="bg-[#7af8c4] hover:bg-[#7af8c4]/80 text-[#141414] w-fit"
           />
         </div>
 
@@ -95,7 +95,7 @@ const Services = () => {
             <div className="" /> {/* Vertical line on left */}
             <Handshake className="w-16 h-16 text-[#dec2e1] mb-4" />
           </div>
-          <div className="text-white/80 text-sm h-20 border-l-4 border-[#8AC1C1] mr-2">
+          <div className="text-white/80 text-sm h-20 border-l-4 border-[#7af8c4] mr-2">
             <p>
               “PBS has been an invaluable partner in ensuring compliance and smooth project execution across NYC.
               Their expertise is unmatched!”
