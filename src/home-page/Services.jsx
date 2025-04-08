@@ -2,150 +2,108 @@
 
 import Heading from "@/components/Heading";
 import CTA from "@/components/CTA";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Building, HardHat } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { Handshake } from "lucide-react"; // using Handshake icon
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
-  const cardsRef = useRef(null);
-
-  const serviceItems = [
-    {
-      heading: "What we Specialize in:",
-      text: [
-        "Compliance Inspections",
-        "Expediting & Permitting",
-        "Annual Mailings",
-        "Owner Representation",
-        "Portfolio Management",
-        "Consultancy over your Projects",
-      ],
-      icon: HardHat,
-    },
-    {
-      heading: "Why NYC Trusts PBS?",
-      description:
-        "50+ Combined years of experience in industry for navigating NYC’s Complex Building Codes 360° Compliance Guardrails",
-      text: [
-        "NYC Expertise",
-        "End-to-End Solutions",
-        "Proactive Approach",
-        "One Stop Shop",
-        "Client-First Focus",
-      ],
-      icon: Building,
-    },
-  ];
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    if (cardsRef.current) {
-      gsap.from(cardsRef.current.querySelectorAll(".service-card"), {
+    if (sectionRef.current) {
+      gsap.from(sectionRef.current.querySelectorAll(".fade-in"), {
         scrollTrigger: {
-          trigger: cardsRef.current,
+          trigger: sectionRef.current,
           start: "top 80%",
           toggleActions: "play none none reverse",
         },
         opacity: 0,
-        y: 50,
+        y: 40,
         duration: 0.7,
         ease: "power2.out",
-        stagger: 0.3,
+        stagger: 0.2,
       });
     }
   }, []);
 
   return (
-    <div className="bg-[#38403e] text-[#dec2e1] py-16 md:py-24 lg:py-32">
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row justify-between">
-        <div className="lg:w-1/2 lg:pr-8 xl:pr-16 mb-16 lg:mb-0">
-          <div>
-            <Heading main="PBS" subpart="Introduction to " />
+    <div className="bg-[#38403e] text-white py-16 md:py-24" ref={sectionRef}>
+      <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+        {/* Left: PBS Introduction */}
+        <div className="fade-in space-y-5">
+          <div className="flex items-center gap-">
+            {/* Logo and Introduction Container */}
+            <div className="flex items-center">
+              <Image
+                src="/PBS Assets/Brand Language/Logo 1.png"
+                alt="PBS Logo"
+                width={200}
+                height={70}
+                className="object-contain mr-2"
+              />
+              <div className="h-20 border-l-4 border-[#8AC1C1] px-2" />
+              <div>
+                <p className="font-semibold text-2xl ">Introduction to</p>
+                <h2 className="text-6xl font-bold">PBS</h2>
+              </div>
+            </div>
           </div>
-          <div className="text-[#dec2e1]/70 space-y-6 mt-6">
+
+          {/* Description Text */}
+          <div className="text-white/70 space-y-4 text-sm leading-relaxed">
             <p>Compliance Made Simple, Projects Done Right</p>
             <p>
-              Proactive Building Solutions is a collaboration of its core team
-              members and fellow New Yorkers, each representing a crucial
-              subdivision that together form the foundation for the PBS
-              network. PBS has honed the skills and built the relationships
-              necessary to revolutionize the industry.
+              Proactive Building Solutions is a collaboration of its core team members and fellow New Yorkers,
+              each representing a crucial subdivision that together form the foundation for the PBS network.
+              PBS has honed the skills and built the relationships necessary to revolutionize the industry.
             </p>
           </div>
-          <div className="mt-10">
-            <CTA text="Know more about us" href="/about-us" styling="bg-[#8AC1C1] hover:bg-[#8AC1C1]/80 text-[#141414]" />
-          </div>
+
+          {/* CTA Button */}
+          <CTA
+            text="Know more about us"
+            href="/about-us"
+            styling="bg-[#8AC1C1] hover:bg-[#50f0c6]/80 text-[#141414] w-fit"
+          />
         </div>
 
-        <div
-          ref={cardsRef}
-          className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-16 lg:mt-0"
-        >
-          {serviceItems.map((item, index) => (
-            <div key={index} className="service-card text-center md:text-left">
-              <div className="text-[#dec2e1] flex items-center flex-col md:flex-row">
-                <item.icon className="w-12 h-12 mt-2 md:mt-0 md:mr-4" aria-hidden="true" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 md:mb-0">{item.heading.split(" ")[0]}</h3>
-                  <h3 className="text-xl font-semibold">{item.heading.split(" ").slice(1).join(" ")}</h3>
-                </div>
-              </div>
+        {/* Middle: Why NYC Trusts PBS */}
+        <div className="fade-in bg-[#272b2a] p-6 rounded-md text-sm leading-relaxed space-y-4 md:ml-4 lg:ml-8">
+          <h3 className="text-2xl font-bold text-white">Why NYC Trusts PBS?</h3>
+          <ul className="list-disc ml-4 text-white/80 space-y-2">
+            <li>50+ Combined years of experience navigating NYC’s Complex Building Codes</li>
+            <li>360° Compliance Guardrails</li>
+            <li>Pre-inspection audits</li>
+            <li>Real-time documentation</li>
+          </ul>
+          <ol className="list-decimal ml-4 text-white/80 space-y-2 pt-4">
+            <li>NYC Expertise</li>
+            <li>End-to-End Solutions</li>
+            <li>Proactive Approach</li>
+            <li>One Stop Shop</li>
+            <li>Client-First Focus</li>
+          </ol>
+        </div>
 
-              {index === 0 && (
-                <div className="bg-[#8AC1C1]/20 p-4 rounded-lg mt-4">
-                  <ul className="text-[#dec2e1]/70 space-y-4">
-                    {item.text.map((point, i) => (
-                      <li key={i} className="flex items-center gap-2 md:pl-2">
-                        <span
-                          style={{
-                            minWidth: "8px",
-                            height: "8px",
-                            borderRadius: "50%",
-                            backgroundColor: "#dec2e1",
-                            marginRight: "5px",
-                          }}
-                        ></span>{" "}
-                        {point}
-                      </li>
-                    ))}
-                    <div className="text-center mt-4 md:pl-2">
-                      <CTA text="Our Offerings" href="/services" styling="bg-[#8AC1C1] hover:bg-[#8AC1C1]/80 text-[#141414]" />
-                    </div>
-                  </ul>
-                </div>
-              )}
-
-              {index === 1 && (
-                <div className="bg-[#8AC1C1]/20 p-4 rounded-lg mt-4">
-                  <div className="text-[#dec2e1]/70 space-y-1">
-                    <p>50+ Combined years of experience in industry for navigating NYC’s Complex Building Codes</p>
-                    <p>360° Compliance Guardrails</p>
-                    <p>Pre-inspection audits</p>
-                    <p>Real-time documentation</p>
-                  </div>
-                  <ol className="text-[#dec2e1]/70 space-y-2 mt-4">
-                    {item.text.map((point, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <span style={{ color: "#b3a2b3" }}>{String.fromCharCode(97 + i)}.</span> {point}
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-              )}
-
-              {index === 1 && (
-                <blockquote className="mt-4 text-[#dec2e1] border-l-4 border-[#8AC1C1] ">
-                  <p className="text-justify pl-2">
-                    "PBS has been an invaluable partner in ensuring compliance and
-                    smooth project execution across NYC. Their expertise is
-                    unmatched!" – John Doe, Real Estate Developer
-                  </p>
-                </blockquote>
-              )}
-            </div>
-          ))}
+        {/* Right: Testimonial */}
+        <div className="fade-in flex flex-col items-center space-y-4 text-center ">
+          <div className="flex items-center">
+            <div className="" /> {/* Vertical line on left */}
+            <Handshake className="w-16 h-16 text-[#dec2e1] mb-4" />
+          </div>
+          <div className="text-white/80 text-sm h-20 border-l-4 border-[#8AC1C1] mr-2">
+            <p>
+              “PBS has been an invaluable partner in ensuring compliance and smooth project execution across NYC.
+              Their expertise is unmatched!”
+            </p>
+            <p>
+              <strong>John Doe, Real Estate Developer</strong>
+            </p>
+          </div>
         </div>
       </div>
     </div>
