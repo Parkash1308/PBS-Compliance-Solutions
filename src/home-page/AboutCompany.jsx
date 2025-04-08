@@ -64,7 +64,7 @@ const AboutCompany = () => {
           </div>
           <div className="mt-10">
             <button
-              className="flex items-center gap-2 text-black bg-[#8AC1C1] border border-[#8AC1C1] px-6 py-2 rounded-full hover:bg-[#8AC1C1]/80 transition duration-300"
+              className="flex items-center gap-2 text-black bg-[#7af8c4] border border-[#7af8c4] px-6 py-2 rounded-full hover:bg-[#8AC1C1]/80 transition duration-300"
               aria-label="Get in touch with our team"
             >
               Get in touch

@@ -80,7 +80,7 @@ const PageContent = () => {
             Your Trusted Partner for Construction Compliance Inspections, Expediting and Property Solutions
           </motion.p>
 
-          <div className="w-16 h-1 bg-[#8AC1C1] mx-auto lg:mx-0 mb-2" />
+          <div className="w-16 h-1 bg-[#7af8c4] mx-auto lg:mx-0 mb-2" />
 
           <motion.p
             className="text-sm md:text-md font-poppins mb-2 md:mb-2 leading-relaxed" // Added leading-relaxed
@@ -92,7 +92,7 @@ const PageContent = () => {
           </motion.p>
 
           <div className="flex justify-center lg:justify-start">
-            <CTA text="Schedule your Consultation Today" href="/contacts" styling="bg-[#8AC1C1] hover:bg-[#38403e]/80 text-[black]" />
+            <CTA text="Schedule your Consultation Today" href="/contacts" styling="bg-[#7af8c4] hover:bg-[#38403e]/80 text-[black]" />
           </div>
         </motion.div>
       </div>

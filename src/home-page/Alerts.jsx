@@ -130,7 +130,7 @@ const Alerts = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
           {/* Building Image */}
           <div ref={imageRef} className="lg:w-1/2 relative">
-            <div className="relative h-full w-full overflow-hidden rounded-2xl border-2 border-[#8AC1C1] bg-gradient-to-br from-[#141414]/30 to-[#8AC1C1]/20">
+            <div className="relative h-full w-full overflow-hidden rounded-2xl border-2 border-[#7af8c4] bg-gradient-to-br from-[#141414]/30 to-[#8AC1C1]/20">
               <CustomImage
                 src="/PBS%20Assets/better-assets/Images%20Without%20Bg/Facebook%20Cover.webp"
                 height={100}
@@ -168,7 +168,7 @@ const Alerts = () => {
               </div>
 
               {/* Separator Line */}
-              <div className="w-16 h-1 bg-[#8AC1C1] mb-8"></div>
+              <div className="w-16 h-1 bg-[#7af8c4] mb-8"></div>
 
               {/* Call to Action */}
               <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-4 mb-8">
@@ -176,7 +176,7 @@ const Alerts = () => {
                   <div className="font-bold text-xl text-white">SIGN UP</div>
                   <div className="font-bold text-xl text-white">BELOW</div>
                 </div>
-                <a href="/alert" className="bg-[#8AC1C1] text-[#38403e] font-medium px-6 py-3 rounded-full inline-flex items-center space-x-2 w-fit hover:bg-[#8AC1C1]/90 transition-colors">
+                <a href="/alert" className="bg-[#7af8c4] text-[#38403e] font-medium px-6 py-3 rounded-full inline-flex items-center space-x-2 w-fit hover:bg-[#8AC1C1]/90 transition-colors">
                   <span>Get your Property registered for Free</span>
                   <span>&rarr;</span>
                 </a>
@@ -201,16 +201,16 @@ const Alerts = () => {
 
                 {/* Progress Indicator */}
                 <div className="mt-10 mb-4 relative">
-                  <div className="h-1 bg-[#8AC1C1]/30 rounded-full relative">
+                  <div className="h-1 bg-[#7af8c4]/30 rounded-full relative">
                     <div
-                      className="absolute h-1 bg-[#8AC1C1] rounded-full"
+                      className="absolute h-1 bg-[#7af8c4] rounded-full"
                       style={{ width: `${(currentStep / (formSteps.length - 1)) * 100}%` }}
                     ></div>
                     {/* Bullet Points */}
-                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-0 w-4 h-4 ${currentStep >= 0 ? 'bg-white' : 'bg-[#8AC1C1]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
-                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-1/3 w-4 h-4 ${currentStep >= 1 ? 'bg-white' : 'bg-[#8AC1C1]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
-                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-2/3 w-4 h-4 ${currentStep >= 2 ? 'bg-white' : 'bg-[#8AC1C1]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
-                    <div className={`absolute top-1/2 transform -translate-y-1/2 right-0 w-4 h-4 ${currentStep >= 3 ? 'bg-white' : 'bg-[#8AC1C1]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
+                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-0 w-4 h-4 ${currentStep >= 0 ? 'bg-white' : 'bg-[#7af8c4]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
+                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-1/3 w-4 h-4 ${currentStep >= 1 ? 'bg-white' : 'bg-[#7af8c4]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
+                    <div className={`absolute top-1/2 transform -translate-y-1/2 left-2/3 w-4 h-4 ${currentStep >= 2 ? 'bg-white' : 'bg-[#7af8c4]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
+                    <div className={`absolute top-1/2 transform -translate-y-1/2 right-0 w-4 h-4 ${currentStep >= 3 ? 'bg-white' : 'bg-[#7af8c4]/30'} rounded-full border-2 border-[#8AC1C1]`}></div>
                   </div>
                 </div>
 
